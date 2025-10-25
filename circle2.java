@@ -2,11 +2,11 @@ package lab5;
 
 import lab4.Point;
 
-public class circle {
+public class Circle {
     Point center;
     double radius; 
     
-    public circle(Point center, double radius) {
+    public Circle(Point center, double radius) {
         this.center = center;
         this.radius = radius;
     }
@@ -36,6 +36,7 @@ public class circle {
         }
     }
 }
+
 
 
 
