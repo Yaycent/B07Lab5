@@ -36,10 +36,11 @@ public class circle {
         }
     }
 
-    public toString() {
+    public void toString() {
         System.out.println("Circle: center = " + center + "radius = " + radius + "perimeter = " + perimeter() + "area = " + area());
     }
 
 
 }
+
 
