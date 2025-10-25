@@ -1,0 +1,66 @@
+package lab5;
+
+import lab4.Point;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+public class CircleTest {
+
+    @Test
+    void testPerimeter() {
+        Point center = new Point(0, 0);
+        Circle c = new Circle(center, 3.0);
+        double expected = 2 * Math.PI * 3.0;
+        assertEquals(expected, c.perimeter(), 0.0001);
+    }
+
+    @Test
+    void testArea() {
+        Point center = new Point(1, 1);
+        Circle c = new Circle(center, 5.0);
+        double expected = Math.PI * 5.0 * 5.0;
+        assertEquals(expected, c.area(), 0.0001);
+    }
+
+    @Test
+    void testGetRadius() {
+        Point center = new Point(2, 2);
+        Circle c = new Circle(center, 4.0);
+        double expected = 4.0;
+        assertEquals(expected, c.getRadius(), 0.0001);
+    }
+
+    @Test
+    void testSetRadius() {
+        Point center = new Point(1, 2);
+        Circle c = new Circle(center, 4.0);
+        c.setRadius(1.0);
+        assertEquals(1.0, c.getRadius(), 0.0001);
+    }
+
+    @Test
+    void testCheckRangeInside() {
+        Point center = new Point(0, 0);
+        Circle c = new Circle(center, 3.0);
+        Point inside = new Point(1, 2);
+        assertTrue(c.checkRange(inside));
+    }
+
+    @Test
+    void testCheckRangeOnCircle() {
+        Point center = new Point(10, -5);
+        Circle c = new Circle(center, 5.0);
+        Point onCircle = new Point(10, 0);
+        assertTrue(c.checkRange(onCircle));
+    }
+
+    @Test
+    void testCheckRangeOutside() {
+        Point center = new Point(-20, 10);
+        Circle c = new Circle(center, 10.0);
+        Point outside = new Point(-20, 21);
+        assertFalse(c.checkRange(outside));
+    }
+}
