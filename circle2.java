@@ -35,13 +35,8 @@ public class circle {
             return false;
         }
     }
-
-    public void printString() {
-        System.out.println("Circle: center = " + center + "radius = " + radius + "perimeter = " + perimeter() + "area = " + area());
-    }
-
-
 }
+
 
 
 
