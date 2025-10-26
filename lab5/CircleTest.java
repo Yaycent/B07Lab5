@@ -1,6 +1,5 @@
 package lab5;
 
-import lab4.Point;
 
 import static org.junit.jupiter.api.Assertions.*;
 

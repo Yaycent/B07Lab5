@@ -1,6 +1,5 @@
 package lab5;
 
-import lab4.Point;
 
 public class Circle {
     Point center;
