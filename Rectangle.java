@@ -27,14 +27,14 @@ public class Rectangle {
 		return false;
 	}
 	// constructor
-	public Rectangle(Point A, Point B, Point C, Point D) {
+	public Rectangle(Point A, Point B, Point C, Point D) throws IllegalArgumentException {
 		if (isRectangle(A, B, C, D)) {
 			this.A = A;
 			this.B = B;
 			this.C = C;
 			this.D = D;
 		}
-		else System.out.println("The points do not form a rectangle");
+		else throw new IllegalArgumentException("The points do not form a rectangle");
 	}
 	// area method
 	public double Area() {
