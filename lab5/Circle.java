@@ -1,7 +1,5 @@
 package lab5;
 
-import lab5.Point;
-
 public class Circle {
     Point center;
     double radius; 
