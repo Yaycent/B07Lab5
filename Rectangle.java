@@ -1,4 +1,6 @@
 
+
+；
 public class Rectangle {
 	// 4 vertices of a rectangle
 	Point A;
