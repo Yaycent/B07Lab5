@@ -2,8 +2,8 @@ package lab5;
 
 public class Circle {
     Point center;
-    double radius; 
-    
+    double radius;
+
     public Circle(Point center, double radius) {
         this.center = center;
         this.radius = radius;
@@ -16,7 +16,7 @@ public class Circle {
     public double area() {
         return Math.PI * radius * radius;
     }
-    
+
     public double getRadius() {
         return radius;
     }
