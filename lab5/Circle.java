@@ -1,6 +1,5 @@
 package lab5;
 
-
 public class Circle {
     Point center;
     double radius; 
