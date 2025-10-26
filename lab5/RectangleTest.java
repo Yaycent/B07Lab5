@@ -1,84 +1,81 @@
-package lab5;
+package lab5；
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class RectangleTest {
-
+public class RectangleTest {
+	
 	@Test
-	void RectangleABCDAreaTest() {
-		Point A = new Point(0,0);
-		Point B = new Point(0,2);
-		Point C = new Point(3,2);
-		Point D = new Point(3,0);
-		Rectangle R = new Rectangle(A, B, C, D);
+	void test_area1() {
+		Point A = new Point (0,0);
+		Point B = new Point (3,4);
+		Point C = new Point (3,0);
+		Point D = new Point (0,4);
 		
-		assertEquals(R.Area(), 6);
+		Rectangle R= new Rectangle(A,B,C,D);
+		
+		assertEquals(12,R.Area());
+	}
+	@Test
+	void test_area2() {
+		Point A = new Point (0,0);
+		Point B = new Point (3,0);
+		Point C = new Point (3,4);
+		Point D = new Point (0,4);
+		
+		Rectangle R= new Rectangle(A,B,C,D);
+		
+		assertEquals(12,R.Area());
 	}
 	
 	@Test
-	void RectangleACBDAreaTest() {
-		Point A = new Point(0,0);
-		Point B = new Point(2,3);
-		Point C = new Point(2,0);
-		Point D = new Point(0,3);
-		Rectangle R = new Rectangle(A, B, C, D);
+	void test_area3() {
+		Point A = new Point (3,0);
+		Point B = new Point (0,0);
+		Point C = new Point (3,4);
+		Point D = new Point (0,4);
 		
-		assertEquals(R.Area(), 6);
+		Rectangle R= new Rectangle(A,B,C,D);
+		
+		assertEquals(12,R.Area());
 	}
 	
 	@Test
-	void RectangleADBCAreaTest() {
-		Point A = new Point(0,0);
-		Point D = new Point(2,3);
-		Point C = new Point(2,0);
-		Point B = new Point(0,3);
-		Rectangle R = new Rectangle(A, B, C, D);
+	void test_Per1() {
+		Point A = new Point (0,0);
+		Point B = new Point (3,4);
+		Point C = new Point (3,0);
+		Point D = new Point (0,4);
 		
-		assertEquals(R.Area(), 6);
+		Rectangle R= new Rectangle(A,B,C,D);
+		
+		assertEquals(14,R.Perimeter());
 	}
 	
 	@Test
-	void NotRectangleTest() {
-		Point A = new Point(0,0);
-		Point B = new Point(0,4);
-		Point C = new Point(3,2);
-		Point D = new Point(3,0);
-		assertThrows(IllegalArgumentException.class, () -> { new Rectangle(A, B, C, D); });
+	void test_Per2() {
+		Point A = new Point (0,0);
+		Point B = new Point (3,0);
+		Point C = new Point (3,4);
+		Point D = new Point (0,4);
+		
+		Rectangle R= new Rectangle(A,B,C,D);
+		
+		assertEquals(14,R.Perimeter());
 	}
 	
 	@Test
-	void RectangleABCDPerimeterTest() {
-		Point A = new Point(0,0);
-		Point B = new Point(0,2);
-		Point C = new Point(3,2);
-		Point D = new Point(3,0);
-		Rectangle R = new Rectangle(A, B, C, D);
+	void test_Per3() {
+		Point A = new Point (3,0);
+		Point B = new Point (0,0);
+		Point C = new Point (3,4);
+		Point D = new Point (0,4);
 		
-		assertEquals(R.Perimeter(), 10);
+		Rectangle R= new Rectangle(A,B,C,D);
+		
+		assertEquals(14,R.Perimeter());
 	}
 	
-	@Test
-	void RectangleACBDPerimeterTest() {
-		Point A = new Point(0,0);
-		Point B = new Point(2,3);
-		Point C = new Point(2,0);
-		Point D = new Point(0,3);
-		Rectangle R = new Rectangle(A, B, C, D);
-		
-		assertEquals(R.Perimeter(), 10);
-	}
-	
-	@Test
-	void RectangleADBCPerimeterTest() {
-		Point A = new Point(0,0);
-		Point D = new Point(2,3);
-		Point C = new Point(2,0);
-		Point B = new Point(0,3);
-		Rectangle R = new Rectangle(A, B, C, D);
-		
-		assertEquals(R.Perimeter(), 10);
-	}
 
 }
