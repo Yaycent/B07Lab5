@@ -1,3 +1,4 @@
+package lab5;
 
 public class Rectangle {
 	// 4 vertices of a rectangle
